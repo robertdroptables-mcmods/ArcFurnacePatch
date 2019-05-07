@@ -1,0 +1,16 @@
+[
+{
+  "modid": "${id}",
+  "name": "${name}",
+  "description": "Temporary fix for BluSunrize/ImmersiveEngineering#3442",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["BobbyTables"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
