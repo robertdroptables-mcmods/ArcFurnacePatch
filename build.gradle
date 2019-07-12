@@ -11,7 +11,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 
 def buildnumber = System.getenv('TRAVIS_BUILD_NUMBER')
 def suffix = buildnumber != null ? ".$buildnumber" : "-SNAPSHOT"
-version = "1.0.0$suffix"
+version = "1.0.1$suffix"
 group = "uk.bobbytables.arcfurnacepatch"
 archivesBaseName = "arcfurnacepatch"
 def displayName = "Arc Furnace Patch"

@@ -5,6 +5,7 @@ import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.tree.*;
+import org.objectweb.asm.util.Printer;
 
 import java.util.Iterator;
 
@@ -36,6 +37,8 @@ public class ArcFurnacePatchTransformer implements IClassTransformer {
                             AbstractInsnNode targetInsnNode = methodNode.instructions.get(targetIndex);
                             if (targetInsnNode.getOpcode() != Opcodes.ICONST_1) {
                                 AFP_LOG.warn("Not applying arc furnace patch, opcode mismatch! Has this been resolved in Immersive Engineering?");
+                                AFP_LOG.warn("Expected {}, but found {}", Printer.OPCODES[Opcodes.ICONST_1], Printer.OPCODES[targetInsnNode.getOpcode()]);
+                                break;
                             }
                             InsnList insnList = new InsnList();
                             insnList.add(new VarInsnNode(Opcodes.ALOAD, 5));
